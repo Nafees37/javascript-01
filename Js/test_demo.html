@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+  </head>
+  <body>
+    <div class="product_1">
+      <label for="">Product Name</label>
+      <input type="text" name="" id="" value="T-shirt" readonly />
+
+      <label for="">Total</label>
+      <input type="number" id="input1" value="1200" disabled />
+
+      <label for="">Enter Your Price</label>
+      <input type="number" id="input2" value="0" oninput="myFunction()" />
+
+      <label for="">Total Price</label>
+      <input type="text" id="result" disabled />
+    </div>
+
+    <div class="product_2">
+      <label for="">Product Name</label>
+      <input type="text" name="" id="" value="Panjabi " readonly />
+
+      <label for="">Total</label>
+      <input type="number" id="input3" value="1500" disabled />
+
+      <label for="">Enter Your Price</label>
+      <input type="number" id="input4" value="0" oninput="myFunction()" />
+
+      <label for="">Total Price</label>
+      <input type="text" id="result1" disabled />
+    </div>
+
+    <br />
+    <br />
+    <label for="" style="color: red; font-size: 20px; font-weight: bold;">Total Taka: <span id="total"></span></label>
+
+    <script>
+      function myFunction() {
+        let x = Number(document.getElementById("input1").value);
+        let y = Number(document.getElementById("input2").value);
+        let z = Number(x * y);
+
+        document.getElementById("result").value = z;
+
+        let a = Number(document.getElementById("input3").value);
+        let b = Number(document.getElementById("input4").value);
+        let c = Number(a * b);
+
+        document.getElementById("result1").value = c;
+
+        document.getElementById("total").innerHTML = z + c;
+      }
+    </script>
+  </body>
+</html>

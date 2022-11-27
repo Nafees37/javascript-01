@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Commerce Websites</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row topHeader">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-4">
+              <p class="phone"><i class="bi bi-telephone-fill"></i> 0160000000</p>
+            </div>
+            <div class="col-8">
+              <ul>
+                <li><a href="index.html">T-shirt</a></li>
+                <li><a href="Items.html">Many Items</a></li>
+                <li><a href="cgpa.html">CGPA Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 p-0">
+          <div class="lakapora" style="height: 340px;">
+            <img src="images/banner2.jpeg" alt="" width="100%" height="100%" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row nafees mt-5">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">Bangla</h1>
+            </div>
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">
+                Input Number: <input type="number" oninput="bgpaFunction()" name="" id="bangla" value="0" style="background-color: transparent; border: 1px solid gray; color: white; padding-left: 20px; outline: none; width: 150px;" />
+              </h1>
+            </div>
+
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">GPA: <span id="bgpa"></span></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-5">
+          <div class="row">
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">English</h1>
+            </div>
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">
+                Input Number: <input type="number" oninput="egpaFunction()" name="" id="english" value="0" style="background-color: transparent; border: 1px solid gray; color: white; padding-left: 20px; outline: none; width: 150px;" />
+              </h1>
+            </div>
+
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">GPA: <span id="egpa"></span></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-5">
+          <div class="row">
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">Mathematics</h1>
+            </div>
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">
+                Input Number: <input type="number" oninput="mgpaFunction()" name="" id="math" value="0" style="background-color: transparent; border: 1px solid gray; color: white; padding-left: 20px; outline: none; width: 150px;" />
+              </h1>
+            </div>
+
+            <div class="col-4 text-center">
+              <h1 class="h4 text-white pt-2">GPA: <span id="mgpa"></span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Bangla
+
+      function bgpaFunction() {
+        let bangla_sub = document.getElementById("bangla").value;
+
+        if (bangla_sub >= 80) {
+          document.getElementById("bgpa").innerHTML = "A+";
+        } else if (bangla_sub >= 70) {
+          document.getElementById("bgpa").innerHTML = "A";
+        } else if (bangla_sub >= 60) {
+          document.getElementById("bgpa").innerHTML = "A-";
+        } else if (bangla_sub >= 50) {
+          document.getElementById("bgpa").innerHTML = "B";
+        } else if (bangla_sub >= 40) {
+          document.getElementById("bgpa").innerHTML = "B-";
+        } else if (bangla_sub >= 30) {
+          document.getElementById("bgpa").innerHTML = "D";
+        } else {
+          document.getElementById("bgpa").innerHTML = "Fail";
+        }
+      }
+
+      // English
+
+      function egpaFunction() {
+        let english_sub = document.getElementById("english").value;
+
+        if (english_sub >= 80) {
+          document.getElementById("egpa").innerHTML = "A+";
+        } else if (english_sub >= 70) {
+          document.getElementById("egpa").innerHTML = "A";
+        } else if (english_sub >= 60) {
+          document.getElementById("egpa").innerHTML = "A-";
+        } else if (english_sub >= 50) {
+          document.getElementById("egpa").innerHTML = "B";
+        } else if (english_sub >= 40) {
+          document.getElementById("egpa").innerHTML = "B-";
+        } else if (english_sub >= 30) {
+          document.getElementById("egpa").innerHTML = "D";
+        } else {
+          document.getElementById("egpa").innerHTML = "Fail";
+        }
+      }
+
+      // Mathematics
+
+      function mgpaFunction() {
+        let mathematics_sub = document.getElementById("math").value;
+
+        if (mathematics_sub >= 80) {
+          document.getElementById("mgpa").innerHTML = "A+";
+        } else if (mathematics_sub >= 70) {
+          document.getElementById("mgpa").innerHTML = "A";
+        } else if (mathematics_sub >= 60) {
+          document.getElementById("mgpa").innerHTML = "A-";
+        } else if (mathematics_sub >= 50) {
+          document.getElementById("mgpa").innerHTML = "B";
+        } else if (mathematics_sub >= 40) {
+          document.getElementById("mgpa").innerHTML = "B-";
+        } else if (mathematics_sub >= 30) {
+          document.getElementById("mgpa").innerHTML = "D";
+        } else {
+          document.getElementById("mgpa").innerHTML = "Fail";
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
